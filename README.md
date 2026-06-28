@@ -33,6 +33,7 @@ Start with the project documentation in [`docs/`](docs/):
 - [Project Rules](docs/PROJECT_RULES.md)
 - [Decisions](docs/DECISIONS.md)
 - [CRM Domain Model](docs/CRM_DOMAIN_MODEL.md)
+- [Sales Pipeline](docs/SALES_PIPELINE.md)
 
 The master blueprint is captured in [`BLUEPRINT.md`](BLUEPRINT.md).
 
