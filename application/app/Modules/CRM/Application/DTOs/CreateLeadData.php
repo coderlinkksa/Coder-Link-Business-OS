@@ -12,9 +12,9 @@ final readonly class CreateLeadData
         public ?string    $email            = null,
         public ?string    $phone            = null,
         public ?string    $serviceRequested = null,
-        public ?int       $companyId        = null,
-        public ?int       $contactPersonId  = null,
-        public ?int       $assignedTo       = null,
+        public int|string|null $companyId        = null,
+        public int|string|null $contactPersonId  = null,
+        public int|string|null $assignedTo       = null,
         public ?string    $notes            = null,
     ) {}
 }

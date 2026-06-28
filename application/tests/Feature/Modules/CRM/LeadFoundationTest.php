@@ -190,7 +190,7 @@ class InMemoryLeadRepository implements LeadRepository
     private array $store  = [];
     private int   $nextId = 1;
 
-    public function findById(int $id): ?Lead
+    public function findById(int|string $id): ?Lead
     {
         return $this->store[$id] ?? null;
     }

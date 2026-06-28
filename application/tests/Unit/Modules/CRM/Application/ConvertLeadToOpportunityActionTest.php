@@ -24,7 +24,7 @@ class ConvertLeadToOpportunityActionTest extends TestCase
 
             public function __construct(private readonly ?Lead $lead) {}
 
-            public function findById(int $id): ?Lead { return $this->lead; }
+            public function findById(int|string $id): ?Lead { return $this->lead; }
 
             public function save(Lead $lead): void { $this->saved = $lead; }
         };

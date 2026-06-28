@@ -23,11 +23,13 @@ class Lead extends BaseModel
         'assigned_to',
         'notes',
         'lost_reason',
+        'converted_at',
     ];
 
     protected $casts = [
-        'source' => LeadSource::class,
-        'status' => LeadStatus::class,
+        'source'       => LeadSource::class,
+        'status'       => LeadStatus::class,
+        'converted_at' => 'datetime',
     ];
 
     public function markConverted(): void
@@ -36,7 +38,8 @@ class Lead extends BaseModel
             throw new LeadAlreadyConvertedException($this->id);
         }
 
-        $this->status = LeadStatus::Converted;
+        $this->status       = LeadStatus::Converted;
+        $this->converted_at = now();
     }
 
     public function hasContactInfo(): bool

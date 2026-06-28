@@ -6,7 +6,7 @@ use App\Shared\Exceptions\NotFoundException;
 
 class LeadNotFoundException extends NotFoundException
 {
-    public function __construct(int $id)
+    public function __construct(int|string $id)
     {
         parent::__construct("Lead #{$id} not found.");
     }

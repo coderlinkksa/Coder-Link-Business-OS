@@ -26,7 +26,7 @@ class CreateLeadActionTest extends TestCase
         $this->repository = new class implements LeadRepository {
             public ?Lead $saved = null;
 
-            public function findById(int $id): ?Lead { return null; }
+            public function findById(int|string $id): ?Lead { return null; }
 
             public function save(Lead $lead): void
             {

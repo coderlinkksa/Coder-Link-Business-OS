@@ -6,7 +6,7 @@ use App\Shared\Exceptions\DomainException;
 
 class LeadAlreadyConvertedException extends DomainException
 {
-    public function __construct(int $id)
+    public function __construct(int|string $id)
     {
         parent::__construct("Lead #{$id} has already been converted to an opportunity.");
     }

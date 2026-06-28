@@ -7,7 +7,7 @@ use App\Modules\CRM\Domain\Models\Lead;
 
 class EloquentLeadRepository implements LeadRepository
 {
-    public function findById(int $id): ?Lead
+    public function findById(int|string $id): ?Lead
     {
         return Lead::find($id);
     }
