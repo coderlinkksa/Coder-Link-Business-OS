@@ -8,6 +8,7 @@ use App\Modules\CRM\Domain\Contracts\TaskRepository;
 use App\Modules\CRM\Infrastructure\Repositories\EloquentActivityRepository;
 use App\Modules\CRM\Infrastructure\Repositories\EloquentLeadRepository;
 use App\Modules\CRM\Infrastructure\Repositories\EloquentTaskRepository;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class CRMServiceProvider extends ServiceProvider
@@ -21,6 +22,8 @@ class CRMServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->loadRoutesFrom(__DIR__ . '/API/Routes/routes.php');
+        Route::middleware('api')
+            ->prefix('api')
+            ->group(__DIR__ . '/API/Routes/routes.php');
     }
 }

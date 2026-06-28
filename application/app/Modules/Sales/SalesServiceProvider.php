@@ -7,6 +7,7 @@ use App\Modules\Sales\Domain\Contracts\OpportunityRepository;
 use App\Modules\Sales\Infrastructure\Listeners\CreateOpportunityOnLeadConversion;
 use App\Modules\Sales\Infrastructure\Repositories\EloquentOpportunityRepository;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class SalesServiceProvider extends ServiceProvider
@@ -18,7 +19,9 @@ class SalesServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->loadRoutesFrom(__DIR__ . '/API/Routes/routes.php');
+        Route::middleware('api')
+            ->prefix('api')
+            ->group(__DIR__ . '/API/Routes/routes.php');
 
         Event::listen(LeadConvertedToOpportunity::class, CreateOpportunityOnLeadConversion::class);
     }
