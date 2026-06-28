@@ -32,6 +32,7 @@ Start with the project documentation in [`docs/`](docs/):
 - [Roadmap](docs/ROADMAP.md)
 - [Project Rules](docs/PROJECT_RULES.md)
 - [Decisions](docs/DECISIONS.md)
+- [CRM Domain Model](docs/CRM_DOMAIN_MODEL.md)
 
 The master blueprint is captured in [`BLUEPRINT.md`](BLUEPRINT.md).
 
