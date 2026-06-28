@@ -10,6 +10,18 @@ secrets/
 node_modules/
 vendor/
 
+# Laravel runtime
+application/vendor/
+application/.env
+application/storage/logs/
+application/storage/framework/cache/
+application/storage/framework/sessions/
+application/storage/framework/views/
+application/bootstrap/cache/
+application/public/hot
+application/public/storage
+application/.phpunit.cache/
+
 # Build output
 dist/
 build/

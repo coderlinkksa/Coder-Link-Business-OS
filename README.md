@@ -42,6 +42,8 @@ Start with the project documentation in [`docs/`](docs/):
 
 The master blueprint is captured in [`BLUEPRINT.md`](BLUEPRINT.md).
 
+The Laravel application lives in [`application/`](application/).
+
 ## Architecture Decision Records
 
 Key decisions recorded in [`docs/adr/`](docs/adr/):

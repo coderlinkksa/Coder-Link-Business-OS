@@ -1,0 +1,3 @@
+﻿<?php
+// Notification module routes
+

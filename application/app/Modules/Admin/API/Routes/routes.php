@@ -1,0 +1,3 @@
+﻿<?php
+// Admin module routes
+
