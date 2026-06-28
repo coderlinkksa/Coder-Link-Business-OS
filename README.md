@@ -39,6 +39,17 @@ Start with the project documentation in [`docs/`](docs/):
 
 The master blueprint is captured in [`BLUEPRINT.md`](BLUEPRINT.md).
 
+## Architecture Decision Records
+
+Key decisions recorded in [`docs/adr/`](docs/adr/):
+
+- [ADR-001 — Laravel as Core Business Application](docs/adr/ADR-001-laravel-as-core.md)
+- [ADR-002 — n8n as Automation Layer](docs/adr/ADR-002-n8n-as-automation-layer.md)
+- [ADR-003 — PostgreSQL as Primary Database](docs/adr/ADR-003-postgresql-as-primary-database.md)
+- [ADR-004 — GitHub as Source of Truth](docs/adr/ADR-004-github-as-source-of-truth.md)
+- [ADR-005 — Google Drive as Business Storage](docs/adr/ADR-005-google-drive-as-business-storage.md)
+- [ADR-006 — Domain Separation](docs/adr/ADR-006-domain-separation.md)
+
 ## Specifications
 
 - [Lead Capture Workflow](specifications/workflows/LEAD_CAPTURE_SPEC.md)
