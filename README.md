@@ -56,6 +56,7 @@ Key decisions recorded in [`docs/adr/`](docs/adr/):
 ## Specifications
 
 - [Lead Capture Workflow](specifications/workflows/LEAD_CAPTURE_SPEC.md)
+- [RBAC Specification](specifications/RBAC_SPECIFICATION.md)
 
 ## Contributing
 
