@@ -23,7 +23,7 @@ class MarkTaskCompletedActionTest extends TestCase
 
             public function __construct(private readonly ?Task $task) {}
 
-            public function findById(int $id): ?Task { return $this->task; }
+            public function findById(int|string $id): ?Task { return $this->task; }
 
             public function save(Task $task): void { $this->saved = $task; }
         };

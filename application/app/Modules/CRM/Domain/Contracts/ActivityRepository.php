@@ -6,7 +6,7 @@ use App\Modules\CRM\Domain\Models\Activity;
 
 interface ActivityRepository
 {
-    public function findById(int $id): ?Activity;
+    public function findById(int|string $id): ?Activity;
 
     public function save(Activity $activity): void;
 }

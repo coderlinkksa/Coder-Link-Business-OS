@@ -25,7 +25,7 @@ class CreateTaskActionTest extends TestCase
         $this->repository = new class implements TaskRepository {
             public ?Task $saved = null;
 
-            public function findById(int $id): ?Task { return null; }
+            public function findById(int|string $id): ?Task { return null; }
 
             public function save(Task $task): void
             {

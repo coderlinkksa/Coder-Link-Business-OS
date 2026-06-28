@@ -147,7 +147,7 @@ class InMemoryActivityRepository implements ActivityRepository
     private array $store  = [];
     private int   $nextId = 1;
 
-    public function findById(int $id): ?Activity
+    public function findById(int|string $id): ?Activity
     {
         return $this->store[$id] ?? null;
     }

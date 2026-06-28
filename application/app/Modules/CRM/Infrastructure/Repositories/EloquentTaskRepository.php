@@ -7,7 +7,7 @@ use App\Modules\CRM\Domain\Models\Task;
 
 class EloquentTaskRepository implements TaskRepository
 {
-    public function findById(int $id): ?Task
+    public function findById(int|string $id): ?Task
     {
         return Task::find($id);
     }

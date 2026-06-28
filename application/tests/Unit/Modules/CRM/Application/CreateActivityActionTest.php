@@ -24,7 +24,7 @@ class CreateActivityActionTest extends TestCase
         $this->repository = new class implements ActivityRepository {
             public ?Activity $saved = null;
 
-            public function findById(int $id): ?Activity { return null; }
+            public function findById(int|string $id): ?Activity { return null; }
 
             public function save(Activity $activity): void
             {

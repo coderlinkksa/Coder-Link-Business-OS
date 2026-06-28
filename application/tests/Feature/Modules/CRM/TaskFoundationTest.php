@@ -204,7 +204,7 @@ class InMemoryTaskRepository implements TaskRepository
     private array $store  = [];
     private int   $nextId = 1;
 
-    public function findById(int $id): ?Task
+    public function findById(int|string $id): ?Task
     {
         return $this->store[$id] ?? null;
     }

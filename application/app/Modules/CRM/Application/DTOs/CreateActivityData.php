@@ -11,9 +11,9 @@ final readonly class CreateActivityData
         public string       $subject,
         public ?string      $body             = null,
         public ?string      $occurredAt       = null,
-        public ?int         $leadId           = null,
-        public ?int         $companyId        = null,
-        public ?int         $contactPersonId  = null,
-        public ?int         $opportunityId    = null,
+        public int|string|null $leadId           = null,
+        public int|string|null $companyId        = null,
+        public int|string|null $contactPersonId  = null,
+        public int|string|null $opportunityId    = null,
     ) {}
 }

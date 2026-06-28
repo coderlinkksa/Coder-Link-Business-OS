@@ -7,7 +7,7 @@ use App\Modules\CRM\Domain\Models\Activity;
 
 class EloquentActivityRepository implements ActivityRepository
 {
-    public function findById(int $id): ?Activity
+    public function findById(int|string $id): ?Activity
     {
         return Activity::find($id);
     }

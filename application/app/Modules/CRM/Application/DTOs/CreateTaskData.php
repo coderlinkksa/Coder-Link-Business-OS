@@ -11,10 +11,10 @@ final readonly class CreateTaskData
         public TaskPriority $priority         = TaskPriority::Normal,
         public ?string      $description      = null,
         public ?string      $dueAt            = null,
-        public ?int         $leadId           = null,
-        public ?int         $companyId        = null,
-        public ?int         $contactPersonId  = null,
-        public ?int         $opportunityId    = null,
-        public ?int         $assignedTo       = null,
+        public int|string|null $leadId           = null,
+        public int|string|null $companyId        = null,
+        public int|string|null $contactPersonId  = null,
+        public int|string|null $opportunityId    = null,
+        public int|string|null $assignedTo       = null,
     ) {}
 }
