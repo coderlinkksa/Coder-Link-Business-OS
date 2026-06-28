@@ -13,7 +13,7 @@ class MarkTaskCompletedAction
         private readonly TaskRepository $tasks,
     ) {}
 
-    public function execute(int $taskId): Task
+    public function execute(int|string $taskId): Task
     {
         $task = $this->tasks->findById($taskId);
 
