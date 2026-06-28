@@ -16,17 +16,17 @@ class AppServiceProvider extends ServiceProvider
 
     private function registerBlueprintMacros(): void
     {
-        // Adds created_by and updated_by (nullable FK to users.id) on business tables.
+        // Adds created_by and updated_by (nullable UUID FK to users.id) on business tables.
         Blueprint::macro('auditStamps', function () {
             /** @var Blueprint $this */
-            $this->unsignedBigInteger('created_by')->nullable()->index();
-            $this->unsignedBigInteger('updated_by')->nullable()->index();
+            $this->uuid('created_by')->nullable()->index();
+            $this->uuid('updated_by')->nullable()->index();
         });
 
-        // Adds owner_id for future multi-tenant isolation (DATABASE_ARCHITECTURE.md §4).
+        // Adds owner_id (UUID FK to users.id) for future multi-tenant isolation.
         Blueprint::macro('ownerReference', function () {
             /** @var Blueprint $this */
-            $this->unsignedBigInteger('owner_id')->nullable()->index();
+            $this->uuid('owner_id')->nullable()->index();
         });
 
         // Timestamps + soft delete as a single call for all business tables.

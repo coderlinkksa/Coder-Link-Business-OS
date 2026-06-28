@@ -7,7 +7,7 @@ use App\Shared\Events\BaseDomainEvent;
 class UserLoggedOut extends BaseDomainEvent
 {
     public function __construct(
-        public readonly int $userId,
+        public readonly int|string $userId,
     ) {
         parent::__construct();
     }

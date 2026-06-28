@@ -59,6 +59,12 @@ class RoleAuthorizationService implements AuthorizationService
             return null;
         }
 
+        // The User model casts 'role' to the Role enum, so $raw may already
+        // be a Role instance when retrieved from the database.
+        if ($raw instanceof Role) {
+            return $raw;
+        }
+
         return Role::tryFrom($raw);
     }
 
@@ -70,6 +76,7 @@ class RoleAuthorizationService implements AuthorizationService
     /**
      * A user owns a record when they are either the creator or the assignee.
      * See RBAC_SPECIFICATION.md §8.
+     * String comparison is used so the check works for both integer and UUID keys.
      */
     private function ownsRecord(User $user, mixed $record): bool
     {
@@ -79,8 +86,9 @@ class RoleAuthorizationService implements AuthorizationService
 
         $assignedTo = $record->assigned_to ?? null;
         $createdBy  = $record->created_by  ?? null;
+        $userId     = (string) $user->getKey();
 
-        return ($assignedTo !== null && (int) $assignedTo === $user->id)
-            || ($createdBy  !== null && (int) $createdBy  === $user->id);
+        return ($assignedTo !== null && (string) $assignedTo === $userId)
+            || ($createdBy  !== null && (string) $createdBy  === $userId);
     }
 }
