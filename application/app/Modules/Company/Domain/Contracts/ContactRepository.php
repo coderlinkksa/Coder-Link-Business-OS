@@ -6,7 +6,7 @@ use App\Modules\Company\Domain\Models\ContactPerson;
 
 interface ContactRepository
 {
-    public function findById(int $id): ?ContactPerson;
+    public function findById(int|string $id): ?ContactPerson;
 
     public function save(ContactPerson $contact): void;
 }

@@ -7,7 +7,7 @@ use App\Modules\Company\Domain\Models\ContactPerson;
 
 class EloquentContactRepository implements ContactRepository
 {
-    public function findById(int $id): ?ContactPerson
+    public function findById(int|string $id): ?ContactPerson
     {
         return ContactPerson::find($id);
     }

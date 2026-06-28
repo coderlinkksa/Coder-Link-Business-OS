@@ -18,6 +18,6 @@ final readonly class CreateCompanyData
         public ?string       $address  = null,
         public ?string       $city     = null,
         public ?string       $country  = null,
-        public ?int          $assignedTo = null,
+        public int|string|null $assignedTo = null,
     ) {}
 }

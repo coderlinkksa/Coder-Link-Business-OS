@@ -25,7 +25,7 @@ class CreateCompanyActionTest extends TestCase
         $this->repository = new class implements CompanyRepository {
             public ?Company $saved = null;
 
-            public function findById(int $id): ?Company { return null; }
+            public function findById(int|string $id): ?Company { return null; }
 
             public function save(Company $company): void
             {

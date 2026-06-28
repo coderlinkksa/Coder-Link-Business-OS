@@ -23,7 +23,7 @@ class CreateContactActionTest extends TestCase
         return new class ($company) implements CompanyRepository {
             public function __construct(private readonly ?Company $company) {}
 
-            public function findById(int $id): ?Company { return $this->company; }
+            public function findById(int|string $id): ?Company { return $this->company; }
 
             public function save(Company $c): void {}
         };
@@ -34,7 +34,7 @@ class CreateContactActionTest extends TestCase
         return new class implements ContactRepository {
             public ?ContactPerson $saved = null;
 
-            public function findById(int $id): ?ContactPerson { return null; }
+            public function findById(int|string $id): ?ContactPerson { return null; }
 
             public function save(ContactPerson $contact): void
             {

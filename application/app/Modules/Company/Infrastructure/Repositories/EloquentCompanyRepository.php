@@ -7,7 +7,7 @@ use App\Modules\Company\Domain\Models\Company;
 
 class EloquentCompanyRepository implements CompanyRepository
 {
-    public function findById(int $id): ?Company
+    public function findById(int|string $id): ?Company
     {
         return Company::find($id);
     }

@@ -209,10 +209,10 @@ class InMemoryCompanyRepository implements CompanyRepository
     private array $store = [];
     private int   $nextId = 1;
 
-    public function findById(int $id): ?Company
+    public function findById(int|string $id): ?Company
     {
         foreach ($this->store as $company) {
-            if ($company->id === $id) {
+            if ((string) $company->id === (string) $id) {
                 return $company;
             }
         }
@@ -240,10 +240,10 @@ class InMemoryContactRepository implements ContactRepository
     private array $store = [];
     private int   $nextId = 1;
 
-    public function findById(int $id): ?ContactPerson
+    public function findById(int|string $id): ?ContactPerson
     {
         foreach ($this->store as $contact) {
-            if ($contact->id === $id) {
+            if ((string) $contact->id === (string) $id) {
                 return $contact;
             }
         }

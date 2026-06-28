@@ -7,13 +7,13 @@ use App\Modules\Company\Domain\Enums\ContactRole;
 final readonly class CreateContactData
 {
     public function __construct(
-        public int         $companyId,
+        public int|string  $companyId,
         public string      $firstName,
         public string      $lastName,
         public ContactRole $role,
-        public ?string     $email     = null,
-        public ?string     $phone     = null,
-        public bool        $isPrimary = false,
-        public ?int        $assignedTo = null,
+        public ?string     $email      = null,
+        public ?string     $phone      = null,
+        public bool        $isPrimary  = false,
+        public int|string|null $assignedTo = null,
     ) {}
 }
