@@ -4,9 +4,9 @@ namespace App\Shared\Contracts;
 
 interface Repository
 {
-    public function findById(int $id): mixed;
+    public function findById(int|string $id): mixed;
 
-    public function save(mixed $model): mixed;
+    public function save(mixed $model): void;
 
-    public function delete(int $id): bool;
+    public function delete(int|string $id): bool;
 }
