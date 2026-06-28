@@ -35,6 +35,10 @@ Start with the project documentation in [`docs/`](docs/):
 
 The master blueprint is captured in [`BLUEPRINT.md`](BLUEPRINT.md).
 
+## Specifications
+
+- [Lead Capture Workflow](specifications/workflows/LEAD_CAPTURE_SPEC.md)
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
