@@ -38,6 +38,7 @@ Start with the project documentation in [`docs/`](docs/):
 - [Technical Architecture](docs/TECHNICAL_ARCHITECTURE.md)
 - [System Modules](docs/SYSTEM_MODULES.md)
 - [Database Architecture](docs/DATABASE_ARCHITECTURE.md)
+- [Laravel Module Structure](docs/LARAVEL_MODULE_STRUCTURE.md)
 
 The master blueprint is captured in [`BLUEPRINT.md`](BLUEPRINT.md).
 
