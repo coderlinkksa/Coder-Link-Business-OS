@@ -166,7 +166,7 @@ class InMemoryOpportunityRepository implements OpportunityRepository
     private array $store  = [];
     private int   $nextId = 1;
 
-    public function findById(int $id): ?Opportunity
+    public function findById(int|string $id): ?Opportunity
     {
         return $this->store[$id] ?? null;
     }

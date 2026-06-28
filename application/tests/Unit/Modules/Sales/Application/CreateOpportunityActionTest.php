@@ -24,7 +24,7 @@ class CreateOpportunityActionTest extends TestCase
         $this->repository = new class implements OpportunityRepository {
             public ?Opportunity $saved = null;
 
-            public function findById(int $id): ?Opportunity { return null; }
+            public function findById(int|string $id): ?Opportunity { return null; }
 
             public function save(Opportunity $opportunity): void
             {
