@@ -25,6 +25,7 @@ ai-marketing-os/
 
 Start with the project documentation in [`docs/`](docs/):
 
+- [Business Model](docs/BUSINESS_MODEL.md)
 - [Project Constitution](docs/PROJECT_CONSTITUTION.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Roadmap](docs/ROADMAP.md)
