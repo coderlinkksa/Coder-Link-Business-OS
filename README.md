@@ -37,6 +37,7 @@ Start with the project documentation in [`docs/`](docs/):
 - [Service Catalog](docs/SERVICE_CATALOG.md)
 - [Technical Architecture](docs/TECHNICAL_ARCHITECTURE.md)
 - [System Modules](docs/SYSTEM_MODULES.md)
+- [Database Architecture](docs/DATABASE_ARCHITECTURE.md)
 
 The master blueprint is captured in [`BLUEPRINT.md`](BLUEPRINT.md).
 
